@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>par ou impar</title>
 </head>
 <body>
-    
+    <main>
+        <h2>par ou impar</h2>
+
+        <input type="number" placeholder="Nro escolhido (1 - 5)" />
+
+        <select>
+            <option>par</option>
+            <option>impar</option>
+        </select>
+
+        <button onclick="play()">jogar</button>
+        
+        <p></p>
+    </main>
+    <script>
+        function play() {
+           const computerChoice = randomnumber(1, 5);
+           const playerChoice = document.querySelector("select").selectedIndex;
+           const playNumberChoice =parseInt(document.querySelector("input").value);
+
+           console.log(computerChoice, playerChoice, playerNumberchoice);
+        }
+
+        function randomnumber(min, max) {
+            return (Math.random() * (max -min) + min).toFixed();
+        }
+    </script>
 </body>
 </html>
