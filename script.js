@@ -1,4 +1,4 @@
-<script>
+
         function play() {
            const computerNumberChoice = parseInt(randomnumber(1, 5));
            const playerChoice = document.querySelector("select").selectedIndex;
@@ -28,6 +28,4 @@
         function randomnumber(min, max) {
             return (Math.random() * (max -min) + min).toFixed();
         }
-    </script>
-</body>
-</html>
+    

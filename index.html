@@ -5,39 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>par ou impar</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-   <!--
-   <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background-color: darkgrey;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        main{
-            text-align: center;
-            background: rgba(0,0,0,0.4);
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        input, button, select {
-           padding: 10px;
-        }
-
-    </style>
--->
+  
 </head>
 <body>
     <main>
@@ -58,36 +26,6 @@
         <p></p>
         <h4></h4>
     </main>
-    <script>
-        function play() {
-           const computerNumberChoice = parseInt(randomnumber(1, 5));
-           const playerChoice = document.querySelector("select").selectedIndex;
-           const playNumberChoice =parseInt(document.querySelector("input").value);
-
-           if(playNumberChoice < 1 || playNumberChoice > 5 || isNaN(playNumberChoice)) {
-              alert("escolha um numero de 1 a 5");
-              return;
-           }
-            
-           const sum = computerNumberChoice + playNumberChoice;
-
-           const result = sum % 2;
-           //0 = par, 1 = impar
-           if ((playerChoice == 0 && result == 0) || (playerChoice == 1 && result > 0)){
-               document.querySelector("p").innerHTML = "você ganhou";
-               document.querySelector("p").style.color = "greenyellow";
-           } else {
-                document.querySelector("p").innerHTML = "você perdeu";
-                document.querySelector("p").style.color = "indianred";
-           }
-
-           document.querySelectorAll("p")[1].innerHTML = "numero jogado pelo computador: " + computerNumberChoice
-           document.querySelector("h4").innerHTML = sum + " => " + (result == 0 ? "deu par" : "deu impar");
-        }
-
-        function randomnumber(min, max) {
-            return (Math.random() * (max -min) + min).toFixed();
-        }
-    </script>
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
